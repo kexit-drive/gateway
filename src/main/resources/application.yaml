@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: gateway
+server:
+  port: 8080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKAHOSTNAME:localhost}:8761/eureka/
+  instance:
+    healthCheckUrlPath: /actuator/health
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
