@@ -1,0 +1,4 @@
+service:
+  url:
+    frontend: http://localhost:5173
+    kexit-core: http://localhost:8090

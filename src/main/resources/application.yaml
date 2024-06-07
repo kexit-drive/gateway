@@ -10,3 +10,8 @@ eureka:
   instance:
     healthCheckUrlPath: /actuator/health
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+service:
+  url:
+    frontend: http://frontend:5173
+    kexit-core: lb://kexit-core
